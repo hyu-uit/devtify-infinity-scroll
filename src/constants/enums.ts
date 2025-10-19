@@ -1,0 +1,33 @@
+export enum LANGUAGES {
+  English = 'English',
+  Spanish = 'Spanish',
+  French = 'French',
+  Chinese = 'Chinese',
+  Japanese = 'Japanese',
+  Korean = 'Korean',
+  German = 'German',
+  Russian = 'Russian',
+  Portuguese = 'Portuguese',
+  Arabic = 'Arabic',
+  Hindi = 'Hindi',
+}
+
+export enum STATES {
+  LA = 'LA',
+  MN = 'MN',
+  KS = 'KS',
+  MO = 'MO',
+  PA = 'PA',
+  SD = 'SD',
+  CT = 'CT',
+  CA = 'CA',
+  MS = 'MS',
+  TN = 'TN',
+  ND = 'ND',
+  WA = 'WA',
+  KY = 'KY',
+  CO = 'CO',
+  OR = 'OR',
+  FL = 'FL',
+  RI = 'RI',
+}
