@@ -1,15 +1,14 @@
 export enum LANGUAGES {
-  English = 'English',
-  Spanish = 'Spanish',
-  French = 'French',
-  Chinese = 'Chinese',
-  Japanese = 'Japanese',
-  Korean = 'Korean',
-  German = 'German',
-  Russian = 'Russian',
-  Portuguese = 'Portuguese',
-  Arabic = 'Arabic',
-  Hindi = 'Hindi',
+  BOSNIAN = 'Bosnian',
+  GALICIAN = 'Galician',
+  HINDI = 'Hindi',
+  ICELANDIC = 'Icelandic',
+  MALTESE = 'Maltese',
+  SESOTHO_SA_LEBOA = 'Sesotho sa Leboa',
+  SETSWANA = 'Setswana',
+  SINDHI = 'Sindhi',
+  UYGHUR = 'Uyghur',
+  ISIZULU = 'isiZulu',
 }
 
 export enum STATES {
