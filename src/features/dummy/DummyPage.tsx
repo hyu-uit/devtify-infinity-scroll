@@ -1,15 +1,18 @@
 import CustomTable from '../../components/CustomTable';
-import { useDummy } from '../../api/dummy/useDummy';
+import { useDummyInfinite } from '../../api/dummy/hooks/useDummyInfinite';
 import DummyColumns from './columns/dummy.columns';
 
 const DummyPage = () => {
-  const { data, isLoading, error } = useDummy();
+  const { data, isLoading, error, hasMore, loadMore, totalItems, loadedItems } =
+    useDummyInfinite();
 
   if (error) {
     return (
-      <div style={{ padding: '20px', textAlign: 'center' }}>
-        <h2>Error loading data</h2>
-        <p style={{ color: 'red' }}>
+      <div className='p-4 text-center'>
+        <h2 className='text-2xl font-bold text-red-500 mb-2'>
+          Error loading data
+        </h2>
+        <p className='text-red-500'>
           {error instanceof Error ? error.message : 'An error occurred'}
         </p>
       </div>
@@ -27,7 +30,13 @@ const DummyPage = () => {
         data={data || []}
         columns={DummyColumns()}
         loading={isLoading}
-        hasPagination={true}
+        hasPagination={false}
+        hasSerial={true}
+        hasInfiniteScroll={true}
+        hasMore={hasMore}
+        onLoadMore={loadMore}
+        totalItems={totalItems}
+        loadedItems={loadedItems}
       />
     </div>
   );

@@ -1,7 +1,8 @@
 import type { TableColumnsType } from 'antd';
 import type { DummyListDto } from '../../../api/dummy/dto/dummy.dto';
 import dayjs from 'dayjs';
-import { LANGUAGES } from '../../../constants/enums';
+import { LANGUAGES, STATES } from '../../../constants/enums';
+import StateBadge from '../components/StateBadge';
 
 const DummyColumns = () => {
   const columns: TableColumnsType<DummyListDto> = [
@@ -50,6 +51,12 @@ const DummyColumns = () => {
       dataIndex: 'state',
       key: 'state',
       width: 150,
+      filters: Object.values(STATES).map((state) => ({
+        text: state,
+        value: state,
+      })),
+      onFilter: (value, record) => record.state === value,
+      render: (state: STATES) => <StateBadge state={state} />,
     },
     {
       title: 'Created Date',
